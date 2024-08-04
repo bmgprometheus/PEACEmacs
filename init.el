@@ -101,6 +101,9 @@
 (use-package straight
   :custom (straight-use-package-by-default t))
 
+;; set-up basic resource utilization configurations
+(require 'init-custom-resources)
+
 
 (provide 'init)
 ::: init.el ends here
