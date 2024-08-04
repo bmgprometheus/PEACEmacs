@@ -27,6 +27,12 @@
 (require 'cc-mode)
 (require 'semantic)
 
+(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+(global-sematic-stickyfunc-mode 1)
+
+(semantic-mode 1)
+
 
 (provide 'init-custom-dev-c-lang)
 ;;; init-custom-dev-c-lang.el ends here
