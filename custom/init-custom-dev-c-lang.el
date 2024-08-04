@@ -33,6 +33,13 @@
 
 (semantic-mode 1)
 
+;; source credit alexott
+;; https://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
+(defun PEACE/cedet-hook ()
+  (local-set-key "\C-c\C-j" 'semantic-ia-fast-jump)
+  (local-set-key "\C-c\C-s" 'semantic-ia-show-summary))
+
+
 
 (provide 'init-custom-dev-c-lang)
 ;;; init-custom-dev-c-lang.el ends here
