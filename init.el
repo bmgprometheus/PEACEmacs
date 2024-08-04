@@ -110,6 +110,8 @@
 (require 'init-custom-windows-navigation)
 (require 'init-custom-windows-user-interface)
 
+;; set-up basic language and local configurations
+(require 'init-custom-languages)
 
 (provide 'init)
 ::: init.el ends here
