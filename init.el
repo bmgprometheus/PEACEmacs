@@ -127,6 +127,9 @@
 (require 'init-custom-dev-basic)
 (require 'init-custom-dev-c-lang)
 
+;;; Third-Party Applications
+;; Emacs Framework Applications
+;; (require 'init-EAF)
 
 (provide 'init)
 ::: init.el ends here
