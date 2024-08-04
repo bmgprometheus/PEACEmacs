@@ -43,5 +43,9 @@
 (add-hook 'c-mode-hook 'PEACE/cedet-hook)
 (add-hook 'c++-mode-hook 'PEACE/cedet-hook)
 
+;; Enable EDE only in C/C++
+(require 'ede)
+(global-ede-mode)
+
 (provide 'init-custom-dev-c-lang)
 ;;; init-custom-dev-c-lang.el ends here
