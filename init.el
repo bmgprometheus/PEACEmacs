@@ -123,5 +123,10 @@
 (require 'init-custom-editor-modes)
 (require 'init-custom-editor-basic)
 
+;; set-up basic development environment
+(require 'init-custom-dev-basic)
+(require 'init-custom-dev-c-lang)
+
+
 (provide 'init)
 ::: init.el ends here
