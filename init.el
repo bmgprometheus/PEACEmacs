@@ -131,5 +131,8 @@
 ;; Emacs Framework Applications
 ;; (require 'init-EAF)
 
+;; general utility packages
+(require 'init-utility-apps)
+
 (provide 'init)
 ::: init.el ends here
