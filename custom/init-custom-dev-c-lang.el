@@ -25,7 +25,7 @@
 ;;; Code:
 
 (require 'cc-mode)
-
+(require 'semantic)
 
 
 (provide 'init-custom-dev-c-lang)
