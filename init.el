@@ -113,5 +113,9 @@
 ;; set-up basic language and local configurations
 (require 'init-custom-languages)
 
+;; set-up themes
+(require 'init-custom-themes)
+
+
 (provide 'init)
 ::: init.el ends here
