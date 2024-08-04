@@ -31,6 +31,14 @@
   (error
    "You need version 27 or higher of Emacs to enable this init.el configuration."))
 
+;; PACKAGE: EMACS GROUP: Startup -> Package Manager -> Disable
+;; Package.el Using straight package manager, therefore we are
+;; removing any code that relates to 'package.el' from all our
+;; configuration. Prevent package.el from auto-loading packages prior
+;; to theirinit-file loading
+
+(setq package-enable-at-startup nil)
 
 
 (provide 'early-init)
+;;; early-init.el ends here
