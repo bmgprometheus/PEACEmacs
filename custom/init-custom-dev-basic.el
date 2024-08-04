@@ -38,6 +38,8 @@
 
 ;; PACKAGE: EMACS
 ;; GROUP: Programming -> Source Code -> Debugging
+(setq gdb-many-windows t		; gdb-many-windows default gdb
+      gdb-show-main t)			; display main routine @ startup
 
 
 (provide 'init-custom-dev-basic)
