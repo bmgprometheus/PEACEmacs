@@ -145,6 +145,12 @@
 (require 'init-org)
 ;; (require 'init-auctex)
 
+;; programming environment packages
+(require 'init-magit)
+(require 'init-dev-c-lang)
+;; (require 'init-sly)
+(require 'init-geiser)
+(require 'init-python)
 
 (provide 'init)
 ::: init.el ends here
