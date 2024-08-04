@@ -104,6 +104,12 @@
 ;; set-up basic resource utilization configurations
 (require 'init-custom-resources)
 
+;; set-up windowing framework
+(require 'init-custom-windows-frame)
+(require 'init-custom-windows-views)
+(require 'init-custom-windows-navigation)
+(require 'init-custom-windows-user-interface)
+
 
 (provide 'init)
 ::: init.el ends here
