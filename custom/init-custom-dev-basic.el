@@ -28,6 +28,14 @@
 ;; GROUP: Programming -> Elisp Emulation
 (require 'cl-lib)			; Emacs emulation for common lisp
 
+;; PACKAGE: EMACS
+;; GROUP: Programming -> Source Code -> Compilation
+(global-set-key (kbd "<f5>")		; F5 key bound for compilation
+		(lambda ()
+		  (interactive)
+		  (setq-local compilation-read-command nil)
+		  (call-interactively 'compile)))
+
 
 (provide 'init-custom-dev-basic)
 ;;; init-custom-dev-basic.el ends here
