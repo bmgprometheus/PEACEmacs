@@ -36,6 +36,9 @@
 		  (setq-local compilation-read-command nil)
 		  (call-interactively 'compile)))
 
+;; PACKAGE: EMACS
+;; GROUP: Programming -> Source Code -> Debugging
+
 
 (provide 'init-custom-dev-basic)
 ;;; init-custom-dev-basic.el ends here
