@@ -140,5 +140,11 @@
 ;; (require 'init-ivy-counsel)
 (require 'init-company)
 
+;; text editing packages
+(require 'init-markdown)
+(require 'init-org)
+;; (require 'init-auctex)
+
+
 (provide 'init)
 ::: init.el ends here
