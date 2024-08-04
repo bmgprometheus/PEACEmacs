@@ -134,5 +134,11 @@
 ;; general utility packages
 (require 'init-utility-apps)
 
+;; auto-completion packages
+(require 'init-helm)
+(require 'init-helm-gtags)
+;; (require 'init-ivy-counsel)
+(require 'init-company)
+
 (provide 'init)
 ::: init.el ends here
