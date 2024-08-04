@@ -88,6 +88,19 @@
 (add-to-list 'load-path (concat user-emacs-directory
 				(convert-standard-filename "lisp")))
 
+;; PEACE PACKAGES
+
+;; First install use-package
+(straight-use-package 'use-package)
+
+;; Configure 'use-package' to always use 'straight.el' as its package
+;; manager.  Calling 'use-package' would normally install
+;; 'straight.el', but since it's already loaded, the installation is
+;; skipped and the configuration is set.
+
+(use-package straight
+  :custom (straight-use-package-by-default t))
+
 
 (provide 'init)
 ::: init.el ends here
