@@ -28,13 +28,14 @@
 ;; SOURCE: https://github.com/radian-software/straight.el
 ;; GROUP: Frameworks -> Package Manager -> `straight.el'
 
-;; The P.E.A.C.E (Packages, Extensions, Applications and Customizations
-;; for Emacs) package manager is 'straight.el' and it operates by
-;; cloning Git repositories rather than downloading packages from a
-;; predifined list of package-archives. 'straight.el' allows us to install
-;; a package fron any branch of any Git repository, and allows us to make
-;; customized changes to any installed package locally, and version control
-;; the customized package.
+;; The P.E.A.C.E (Packages, Extensions, Applications and
+;; Customizations for Emacs) package manager is 'straight.el' and it
+;; operates by cloning Git repositories rather than downloading
+;; packages from a predifined list of package-archives. 'straight.el'
+;; allows us to install a package fron any branch of any Git
+;; repository, and allows us to make customized changes to any
+;; installed package locally, and version control the customized
+;; package.
 
 ;; Bootstrap 'straight.el' by loading the recommended bootstrap configuration.
 ;; Git has to be installed in order to use 'straight.el'
@@ -54,6 +55,38 @@
       (goto-char (point-max))
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
+
+;; PACKAGE:  PEACEmacs Customizations
+;; GROUP: Customization -> Libraries -> Paths
+;;
+;; At start-up, set the value of 'load-path' so that Emacs can find
+;; application customizations and extensions from local installation
+;; directories. Even though the default directory for emacs is
+;; .emacs.d/ in the user's home folder, we err on the side of caution
+;; and simply concatenate the folders used by PEACE to the value
+;; supplied by 'user-emacs-directory'. In constructing the path to be
+;; passed to 'load-path' we use the Emacs funciton
+;; 'convert-standard-file-name' to ensure that the path is valid on
+;; all supported operating system platforms. Note that'load-path' does
+;; not add any subdirectories, or their descendant subdirectories.
+;;
+;; The convention in PEACE is to use the following structure: (a) a
+;; "custom" directory for default Emacs customizations; (b) a
+;; "site-lisp" directory for PEACE specific Lisp libraries; and (c) a
+;; "lisp" directory for key third-party applications and extensions to
+;; Emacs.
+;;
+;; DEBUG: After 'M-x eval-buffer RET' run 'C-h v load-path RET' to see
+;;        the current list of directories being loaded. If the
+;;        directory is not listed, check for conflicting libraries via
+;;        the command 'M-x locate-library',
+
+(add-to-list 'load-path (concat user-emacs-directory
+				(convert-standard-filename "custom")))
+(add-to-list 'load-path (concat user-emacs-directory
+				(convert-standard-filename "site-lisp")))
+(add-to-list 'load-path (concat user-emacs-directory
+				(convert-standard-filename "lisp")))
 
 
 (provide 'init)
