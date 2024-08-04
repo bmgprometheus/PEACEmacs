@@ -116,6 +116,12 @@
 ;; set-up themes
 (require 'init-custom-themes)
 
+;; set-up basic editing framework
+(require 'init-custom-editor-fonts)
+(require 'init-custom-editor-views-read)
+(require 'init-custom-editor-formatting)
+(require 'init-custom-editor-modes)
+(require 'init-custom-editor-basic)
 
 (provide 'init)
 ::: init.el ends here
