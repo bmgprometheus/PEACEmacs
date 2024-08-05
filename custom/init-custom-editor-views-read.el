@@ -24,7 +24,9 @@
 
 ;;; Code:
 
-
+;; PACKAGE: EMACS
+;; GROUP: Editor -> Read Views
+(setq view-read-only t)
 
 
 
