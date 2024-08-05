@@ -116,6 +116,12 @@ reaches the beginning or end of the buffer, stop there."
   (interactive)
   (indent-region (point-min) (point-max)))
 
+;; prelude-editing.el
+(defcustom prelude-indent-sensitive-modes
+  '(coffee-mode python-mode slim-mode haml-mode yaml-mode)
+  "Modes for which auto-indenting is suppressed."
+  :type 'list)
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
