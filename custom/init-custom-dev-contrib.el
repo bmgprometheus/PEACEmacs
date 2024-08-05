@@ -136,6 +136,8 @@ reaches the beginning or end of the buffer, stop there."
 	  (message "Indented buffer.")))
       (whitespace-cleanup))))
 
+(global-set-key (kbd "C-c i") 'indent-region-or-buffer)
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
