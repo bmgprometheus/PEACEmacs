@@ -151,6 +151,19 @@ reaches the beginning or end of the buffer, stop there."
     (setq end (line-end-position))
     (cons beg end)))
 
+;; smart openline
+(defun prelude-smart-open-line (arg)
+  "Insert an empty line after the current line.
+Position the cursor at its beginning, according to the current
+mode. WIth a prefix ARG open line above the current line."
+  (interactive "P")
+  (if arg
+      (prelude-smart-open-line-above)
+    (progn
+      (move-end-of-line nil)
+      (newline-and-indent))))
+
+  
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
