@@ -92,6 +92,9 @@ reaches the beginning or end of the buffer, stop there."
   '(python-mode slim-mode haml-mode)
   "Modes for which auto-indenting is suppressed.")
 
+(defvar yank-advised-indent-threshold 1000
+  "Threshold (# chars) over which indentation does not automatically occur.")
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
