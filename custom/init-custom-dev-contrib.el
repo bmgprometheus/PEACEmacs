@@ -80,6 +80,14 @@ reaches the beginning or end of the buffer, stop there."
 		 (just-one-space 0)
 		 (backward-char 1)))))
 
+;; taken from prelude-editor.el
+;; automatically indenting yanked text if in programming-modes
+(defvar yank-indent-modes
+  '(LaTeX-mode TeX-mode)
+  "Modes in which to indent regions that are yanked (or
+  yank-popped). Only modes that don't derive from 'prog-mode'
+ should be listed here.")
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
