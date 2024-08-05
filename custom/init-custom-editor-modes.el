@@ -26,7 +26,12 @@
 
 ;; PACKAGE: EMACS
 ;; GROUP: Editor -> Major and Minor Modes
+(setq outline-minor-mode-prefix "\C-c\C-o") ; change from C-c @
 
+(add-hook 'outline-minor-mode-hook
+	  (lambda () (local-set-key "\C-c\C-o"
+				    outline-mode-prefix-map)))
+(fset 'yes-or-no-p 'y-or-n-p)
 
 
 
