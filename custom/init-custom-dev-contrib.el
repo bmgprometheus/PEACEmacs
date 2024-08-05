@@ -110,6 +110,12 @@ reaches the beginning or end of the buffer, stop there."
       (let ((transient-mark-mode nil))
 	(yank-advised-indent-function (region-beginning) (region-end)))))
 
+;; prelude-core.el
+(defun indent-buffer ()
+  "Indent the currently visited buffer."
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
