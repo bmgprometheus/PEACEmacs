@@ -30,5 +30,21 @@
 (remove-hook 'text-mode-hook		; Remove auto fill when
 	     'turn-on-auto-fill)	; editing in text mode
 
+;; PACKAGE: EMACS
+;; GROUP: Editor -> Editing Assistance
+(column-number-mode)			; Show col num for cursor
+(global-display-line-numbers-mode t)	; show line num in editor
+
+(dolist (mode '(org-mode-hook
+		term-mode-hook
+		shell-mode-hook
+		treemacs-mode-hook
+		eshell-mode-hook))
+  (add-hook mode (lambda ()
+		   (display-line-numbers-mode 0))))
+
+(show-paren-mode 1)			; matching parenthesis
+(setq show-paren-delay 0)
+
 (provide 'init-custom-editor-basic)
 ;;; init-custom-editor-basic.el ends here
