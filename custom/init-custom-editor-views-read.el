@@ -31,7 +31,21 @@
 (with-eval-after-load "view-mode"
   (define-key view-mode-map (kbd "s") 'isearch-forward-regexp))
 
-
+(add-hook 'read-only-mode-hook		; buffer cursors
+	  (lambda ()
+	    (cond
+	     ((and (not buffer-read-only)
+		   (not (eq (get major-mode 'mode-class) 'special)))
+	      (hl-line-mode -1)
+	      (setq-local blink-cursor-blinks 0)
+	      (setq-local cursor-type '(bar . 3))
+	      (company-mode t))
+	     ((and buffer-read-only
+		   (not (eq (get major-mode 'mode-class) 'special)))
+	      (hl-line-mode t)
+	      (setq-local blink-cursor-blinks 1)
+	      (setq-local cursor-type 'hollow)
+	      (company-mode -1)))))
 
 (provide 'init-custom-editor-views-read)
 ;;; init-custom-editor-views-read.el ends here
