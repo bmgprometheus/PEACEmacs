@@ -122,6 +122,20 @@ reaches the beginning or end of the buffer, stop there."
   "Modes for which auto-indenting is suppressed."
   :type 'list)
 
+(defun indent-region-or-buffer ()
+  "Indent a region if selected, otherwise the whole buffer."
+  (interactive)
+  (unless (member major-mode prelude-indent-sensitive-modes)
+    (save-excursion
+      (if (region-active-p)
+	  (progn
+	    (indent-region (region-beginning) (region-end))
+	    (message "Indented selected region."))
+	(progn
+	  (indent-buffer)
+	  (message "Indented buffer.")))
+      (whitespace-cleanup))))
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
