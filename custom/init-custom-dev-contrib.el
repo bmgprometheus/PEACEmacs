@@ -100,6 +100,16 @@ reaches the beginning or end of the buffer, stop there."
   (if (<= (- end beg) yank-advised-indent-threshold)
       (indent-region beg end nil)))
 
+(defadvice yank (after yank-indent activate)
+  "If current mode is one of 'yank-indent-modes, indent yanked
+  text (with prefix arg don't indent)."
+  (if (and (not (ad-get-arg 0))
+	   (not (member major-mode yank-indent-blacklisted-modes))
+	   (or (derived-mode-p 'prog-mode)
+	       (member major-mode yank-indent-modes)))
+      (let ((transient-mark-mode nil))
+	(yank-advised-indent-function (region-beginning) (region-end)))))
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
