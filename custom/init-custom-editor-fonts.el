@@ -24,7 +24,13 @@
 
 ;;; Code:
 
-
+;; PACKAGE: EMACS
+;; GROUP: Editor -> Fonts
+(set-face-attribute 'default nil
+		    :font "Fira Code Retina"
+		    :height 115
+		    ;; TODO: :height efs/default-font-size
+		    )
 
 
 
