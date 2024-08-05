@@ -36,7 +36,8 @@
 (unless (eq system-type 'windows-nt)
   (set-selection-coding-system 'utf-8))
 
-
+(setq x-select-request-type		; x-window app selections
+      '(UTF-8_STRING COMPOUND_TEXT TEXT STRING))
 
 (provide 'init-custom-languages)
 ;;; init-custom-languages.el ends here
