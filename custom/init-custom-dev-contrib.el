@@ -88,6 +88,10 @@ reaches the beginning or end of the buffer, stop there."
   yank-popped). Only modes that don't derive from 'prog-mode'
  should be listed here.")
 
+(defvar yank-indent-blacklisted-modes
+  '(python-mode slim-mode haml-mode)
+  "Modes for which auto-indenting is suppressed.")
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
