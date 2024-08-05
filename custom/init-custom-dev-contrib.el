@@ -95,6 +95,11 @@ reaches the beginning or end of the buffer, stop there."
 (defvar yank-advised-indent-threshold 1000
   "Threshold (# chars) over which indentation does not automatically occur.")
 
+(defun yank-advised-indent-function (beg end)
+  "Do indentation, as long as the region isn't too large."
+  (if (<= (- end beg) yank-advised-indent-threshold)
+      (indent-region beg end nil)))
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
