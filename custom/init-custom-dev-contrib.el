@@ -68,6 +68,18 @@ reaches the beginning or end of the buffer, stop there."
      (list (line-beginning-position)
 	   (line-beginning-position 2)))))
 
+;; kill a line, including white-space characters until next
+;; non-white-space character of next line
+(defadvice kill-line (before check-position activate)
+  (if (member major-mode
+	      '(emacs-lisp-mode scheme-mode lisp-mode
+				c-mode c++-mode objc-mode
+				latex-mode plain-tex-mode))
+      (if (and (eolp) (not (bolp)))
+	  (progn (forward-char 1)
+		 (just-one-space 0)
+		 (backward-char 1)))))
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
