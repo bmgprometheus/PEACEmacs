@@ -52,6 +52,8 @@
 	    (setq truncate-lines t)
 	    (outline-minor-mode t)))
 
+(electric-pair-mode 1)
+
 
 (provide 'init-custom-editor-formatting)
 ;;; init-custom-editor-formatting.el ends here
