@@ -33,6 +33,23 @@
 				    outline-mode-prefix-map)))
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; PACKAGE:EMACS
+;; GROUP: Editor -> Major and Minor Modes -> diff-mode
+(add-hook 'diff-mode-hook		; show whitespace
+	  (lambda ()
+	    (setq-local whitespace-style
+			'(face
+			  tabs
+			  tab-mark
+			  spaces
+			  space-mark
+			  trailing
+			  indentation::space
+			  indentation::tab
+			  newline
+			  newline-mark))
+	    (whitespace-mode 1)))
+
 
 
 (provide 'init-custom-editor-modes)
