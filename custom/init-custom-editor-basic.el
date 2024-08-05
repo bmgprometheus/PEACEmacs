@@ -46,5 +46,13 @@
 (show-paren-mode 1)			; matching parenthesis
 (setq show-paren-delay 0)
 
+;; PACKAGE: EMACS
+;; GROUP: Editor -> Selection
+(transient-mark-mode 1)			; marked region visible
+(save-place-mode t)			; buffer last edit point
+(setq global-mark-ring-max 5000		; mark ring entry limit
+      mark-ring-max 5000		; kill ring limit
+      mode-require-final-newline t)	; newline at EOF
+
 (provide 'init-custom-editor-basic)
 ;;; init-custom-editor-basic.el ends here
