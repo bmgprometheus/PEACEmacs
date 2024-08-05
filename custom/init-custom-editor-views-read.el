@@ -28,7 +28,8 @@
 ;; GROUP: Editor -> Read Views
 (setq view-read-only t)
 
-
+(with-eval-after-load "view-mode"
+  (define-key view-mode-map (kbd "s") 'isearch-forward-regexp))
 
 
 
