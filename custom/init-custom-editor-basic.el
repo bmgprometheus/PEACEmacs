@@ -24,6 +24,11 @@
 
 ;;; Code:
 
+;; PACKAGE: EMACS
+;; GROUP: Editor -> Auto Formatting
+(setq save-abbrevs 'silently)		; Abbrevs saved automatically
+(remove-hook 'text-mode-hook		; Remove auto fill when
+	     'turn-on-auto-fill)	; editing in text mode
 
 (provide 'init-custom-editor-basic)
 ;;; init-custom-editor-basic.el ends here
