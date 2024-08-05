@@ -138,6 +138,19 @@ reaches the beginning or end of the buffer, stop there."
 
 (global-set-key (kbd "C-c i") 'indent-region-or-buffer)
 
+;; add duplicate line function from Prelude
+;; taken from prelude-core.el
+(defun prelude-get-positions-of-line-or-region ()
+  "Return positions (beg . end) of the curent line or region."
+  (let (beg end)
+    (if (and mark-active (> (point) (mark)))
+	(exchange-point-and-mark))
+    (setq beg (line-beginning-position))
+    (if mark-active
+	(exchange-point-and-mark))
+    (setq end (line-end-position))
+    (cons beg end)))
+
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
   
