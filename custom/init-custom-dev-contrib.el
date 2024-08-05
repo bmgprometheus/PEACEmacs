@@ -51,6 +51,15 @@ reaches the beginning or end of the buffer, stop there."
 
 (global-set-key (kbd "C-a") 'prelude-move-beginning-of-line)
 
+(defadvice kill-ring-save (before slick-copy activate compile)
+  "When called interactively with no active region, copy a single
+ line instead."
+  (interactive
+   (if mark-active (list (region-beginning) (region-end))
+     (message "Copied line")
+     (list (line-beginning-position)
+	   (line-beginning-position 2)))))
+
 
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
