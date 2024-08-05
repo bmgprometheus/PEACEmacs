@@ -54,5 +54,11 @@
       mark-ring-max 5000		; kill ring limit
       mode-require-final-newline t)	; newline at EOF
 
+;; PACKAGE: Emacs
+;; GROUP: Editor -> Selection -> Killing
+(setq kill-ring-max 5000		; kill ring capacity
+      kill-whole-line t)		; kill line & next line up
+
+
 (provide 'init-custom-editor-basic)
 ;;; init-custom-editor-basic.el ends here
