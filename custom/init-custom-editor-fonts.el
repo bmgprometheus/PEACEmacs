@@ -38,6 +38,14 @@
 		    ;; TODO: :height efs/default-font-size
 		    )
 
+(set-face-attribute 'variable-pitch nil
+		    :font "Cantarell"
+		    :height 115
+		    ;; TODO: :height efs/default-font-size
+		    ;; weight: 'regular
+		    :weight 'normal
+		    )
+
 
 
 (provide 'init-custom-editor-fonts)
