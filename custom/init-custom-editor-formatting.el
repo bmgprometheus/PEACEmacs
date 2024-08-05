@@ -41,7 +41,16 @@
 (global-set-key (kbd "C-c w")		; mode for whitespace
 		'whitespace-mode)
 
+;; PACKAGE: EMACS
+;; GROUP: Editor -> Word-wrap
+(global-visual-line-mode 1)		; global word-wrap mode
 
+(setq-default truncate-lines t)		; truncates at edge
+
+(add-hook 'prog-mode-hook
+	  (lambda()
+	    (setq truncate-lines t)
+	    (outline-minor-mode t)))
 
 
 (provide 'init-custom-editor-formatting)
