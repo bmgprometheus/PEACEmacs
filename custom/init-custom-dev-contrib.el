@@ -163,6 +163,14 @@ mode. WIth a prefix ARG open line above the current line."
       (move-end-of-line nil)
       (newline-and-indent))))
 
+(defun prelude-smart-open-line-above ()
+  "Insert an empty line above the current line.
+Position the cursor at its beginning, according to the current mode."
+  (interactive)
+  (move-beginning-of-line nil)
+  (newline-and-indent)
+  (forward-line -1)
+  (indent-according-to-mode))
   
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
