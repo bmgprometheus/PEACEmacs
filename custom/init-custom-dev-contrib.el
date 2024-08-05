@@ -171,6 +171,8 @@ Position the cursor at its beginning, according to the current mode."
   (newline-and-indent)
   (forward-line -1)
   (indent-according-to-mode))
+
+(global-set-key (kbd "M-o") 'prelude-smart-open-line)
   
 (provide 'init-custom-dev-contrib)
 ;;; init-custom-dev-contrib.el ends here
