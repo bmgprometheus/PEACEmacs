@@ -32,6 +32,12 @@
 		    ;; TODO: :height efs/default-font-size
 		    )
 
+(set-face-attribute 'fixed-pitch nil
+		    :font "Fira Code Retina"
+		    :height 115
+		    ;; TODO: :height efs/default-font-size
+		    )
+
 
 
 (provide 'init-custom-editor-fonts)
