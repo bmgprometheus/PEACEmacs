@@ -46,7 +46,12 @@
 ;;       on doom-emacs style.
 (use-package doom-themes)
 
+;; PACKAGE: darkburn-theme
+;; GROUP: Themes
+;; DESC: default theme for PEACEmacs
+(use-package darkburn-theme)
 
+(load-theme 'darkburn t)		; load darkburn theme
 
 
 (provide 'init-custom-themes)
