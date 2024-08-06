@@ -29,6 +29,10 @@
 (setq frame-resize-pixelwise t		; resize at pixel res
       x-frame-normalize-before-maximize t)
 
+(add-to-list 'initial-frame-alist	; maximize frame
+	     ;;'(fullscreen . fullscreen))
+	     '(fullscreen . fullheight))
+
 
 (provide 'init-custom-windows-frame)
 ;;; init-custom-windows-frame.el ends here
