@@ -30,6 +30,15 @@
 ;;       exceptionally easy on the eyes.
 (use-package zenburn-theme)
 
+;; PACKAGE: solarized-theme
+;; GROUP: Themes
+;; DESC: 'solarized-theme' is an Emacs 24-bit theme making
+;;       use of a solarized palette, developed by Ethan
+;;       Schoonover. Available themes that can be enabled
+;;       by 'load-theme' are 'solarized-light' and
+;;       'solarized-dark'.
+(use-package solarized-theme)
+
 
 
 
