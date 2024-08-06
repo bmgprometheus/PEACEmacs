@@ -35,7 +35,7 @@
 (add-hook 'sh-mode-hook (lambda ()
 			  (setq tab-width 4)))
 (add-hook 'prog-mode-hook		; show unnecessary whitespace
-	  (lambda() (interacive)
+	  (lambda() (interactive)
 	    (setq show-trailing-whitespace 1)))
 
 (global-set-key (kbd "C-c w")		; mode for whitespace
