@@ -28,6 +28,10 @@
 ;; GROUP: User Interface -> Windowing -> Navigation
 (windmove-default-keybindings)		; shift-arrow key navigation
 
+(global-set-key (kbd "C-x 0")		; move to previous window
+		(lambda ()
+		  (interactive)
+		  (other-window -1)))
 
 
 (provide 'init-custom-windows-navigation)
