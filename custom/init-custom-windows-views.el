@@ -24,6 +24,11 @@
 
 ;;; Code:
 
+;; PACKAGE: EMACS
+;; GROUP: Windows -> Views
+(setq inhibit-startup-message t)
+(setq visible-bell t
+      ring-bell-function #'ignore)
 
 (provide 'init-custom-windows-views)
 ;;; init-custom-windows-views.el ends here
