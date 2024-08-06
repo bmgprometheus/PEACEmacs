@@ -33,6 +33,7 @@
 	     ;;'(fullscreen . fullscreen))
 	     '(fullscreen . fullheight))
 
+(desktop-save-mode 1)			; save state on exit
 
 (provide 'init-custom-windows-frame)
 ;;; init-custom-windows-frame.el ends here
