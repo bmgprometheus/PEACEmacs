@@ -24,6 +24,9 @@
 
 ;;; Code:
 
+;; PACKAGE: EMACS
+;; GROUP: User Interface -> Windowing -> Navigation
+(windmove-default-keybindings)		; shift-arrow key navigation
 
 
 
