@@ -31,6 +31,18 @@
 	  (lambda ()
 	    (setq blink-cusor-blinks 0)))
 
+;; GROUP: User Interface -> numbering
+(column-number-mode)
+(global-display-line-numbers-mode t)	; line numbers in editor
+
+(dolist (mode '(org-mode-hook		; disable for some modes
+		term-mode-hook
+		shell-mode-hook
+		treemacs-mode-hook
+		eshell-mode-hook))
+  (add-hook mode (lambda ()
+		   (display-line-numbers-mode 0))))
+
 	    
 
 (provide 'init-custom-windows-user-interface)
