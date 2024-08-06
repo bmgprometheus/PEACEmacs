@@ -43,6 +43,20 @@
   (add-hook mode (lambda ()
 		   (display-line-numbers-mode 0))))
 
+;; GROUP: User Interface -> fringe messages
+(set-fringe-mode 10)
+(setq visual-line-fringe-indicators
+      '(left-curly-arrow right-curly-arrow))
+(when
+    (fboundp 'set-fringe-bitmap-face)	; word-wrap indicator
+  (defface visual-line-wrap-face
+    '((t (:foreground "gray")))
+    "Face for visual line indicators.")
+  (set-fringe-bitmap-face
+   'left-curly-arrow 'visual-line-wrap-face)
+  (set-fringe-bitmap-face
+   'right-curly-arrow 'visual-line-wrap))
+
 	    
 
 (provide 'init-custom-windows-user-interface)
