@@ -24,7 +24,11 @@
 
 ;;; Code:
 
-
+;; PACKAGE: zenburn-theme
+;; GROUP: Themes
+;; DESC: 'zenburn' is a low-contrast color theme that is
+;;       exceptionally easy on the eyes.
+(use-package zenburn-theme)
 
 
 
