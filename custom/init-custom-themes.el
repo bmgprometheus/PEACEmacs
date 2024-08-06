@@ -39,6 +39,13 @@
 ;;       'solarized-dark'.
 (use-package solarized-theme)
 
+;; PACKAGE: doom-themes
+;; GROUP: Themes
+;; DESC: A series of 'doom-zenburn', 'doom-monokai-pro',
+;;       'doom-tommorow-night', 'doom-one' themes based
+;;       on doom-emacs style.
+(use-package doom-themes)
+
 
 
 
