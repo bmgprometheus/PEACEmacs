@@ -24,6 +24,12 @@
 
 ;;; Code:
 
+;; PACKAGE: EMACS
+;; GROUP: User Interface -> cursors
+(setq-default blink-cursor-blinks 0)
+(add-hook 'after-init-hook
+	  (lambda ()
+	    (setq blink-cusor-blinks 0)
 
 (provide 'init-custom-windows-user-interface)
 ;;; init-custom-windows-user.el ends here
