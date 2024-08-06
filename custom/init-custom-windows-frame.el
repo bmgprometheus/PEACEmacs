@@ -24,7 +24,10 @@
 
 ;;; Code:
 
-
+;; PACKAGE:EMACS
+;; GROUP: User Interface -> Windowing
+(setq frame-resize-pixelwise t		; resize at pixel res
+      x-frame-normalize-before-maximize t)
 
 
 (provide 'init-custom-windows-frame)
