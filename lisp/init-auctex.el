@@ -20,7 +20,13 @@
 
 ;;; Commentary:
 
-;; 
+;;              AucTex is a comprehensive customizable integrated
+;;              environment for writing input files for TeX, LaTex,
+;;              ConTeXt, Texinfo, and docTeX using Emacs. AucTeX
+;;              processes source files by running TeX and related
+;;              tools (such as output filters, post processors for
+;;              generating indices and bibiliographies, and viewers)
+;;              from inside Emacs.
 
 ;;; Code:
 
